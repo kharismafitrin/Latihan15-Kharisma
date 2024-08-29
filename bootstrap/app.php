@@ -114,4 +114,8 @@ $app->router->group([
 
 $app->withEloquent();
 
+$app->middleware([
+    App\Http\Middleware\CorsMiddleware::class
+]);
+
 return $app;

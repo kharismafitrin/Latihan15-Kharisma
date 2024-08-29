@@ -13,6 +13,10 @@
 |
 */
 
+$router->options('{any:*}', function () {
+    return response('', 200)->header('Access-Control-Allow-Method', 'GET');
+});
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
